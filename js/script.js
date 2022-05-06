@@ -1,3 +1,4 @@
+// Guess a random choice
 function computerPlay() {
     let rand = Math.floor(Math.random() * 3) + 1;
     
@@ -15,6 +16,8 @@ function computerPlay() {
 
 }
 
+// Play a round of Rock Paper Scissors and return 1 if the player wins
+// or return 0
 function playRound(playerSelection, computerSelection) {
     let lower = playerSelection.toLowerCase();
     playerSelection = lower.charAt(0).toUpperCase() + lower.slice(1);
@@ -37,6 +40,7 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+// Play 5 iteration of the game, count the winnings and display the final result
 function game() {
     let winCount = 0;
     for (i = 0; i < 5; i++) {

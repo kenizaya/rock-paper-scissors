@@ -16,26 +16,29 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    lower = playerSelection.toLowerCase();
-    playerSelection = lower.charAt(0).toUpperCase() + lower.slice(1);
-
-    console.log(playerSelection);
+    let lower = playerSelection.toLowerCase();
+    let playerSelection = lower.charAt(0).toUpperCase() + lower.slice(1);
+    let winCount = 0;
 
     if (playerSelection === computerSelection) {
-        return "It's a tie";
+        console.log("It's a tie");
     }
 
     if (playerSelection === "Rock" && computerSelection === "Paper") {
-        return "You Lose! Paper beats Rock";
+        console.log("You Lose! Paper beats Rock");
     }   else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        return "You Lose! Scissors beats Paper";
+        console.log("You Lose! Scissors beats Paper");
     }   else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-        return "You Lose! Rock beats Scissors";
+        console.log("You Lose! Rock beats Scissors");
     }   else {
-        return "You Win! " + playerSelection + " beats " + computerSelection;
+        console.log("You Win! " + playerSelection + " beats " + computerSelection);
+        winCount++;
+
     }
+    return winCount;
+
 }
 
 
 
-console.log(playRound("rock", computerPlay()));
+// console.log(playRound("rock", computerPlay()));

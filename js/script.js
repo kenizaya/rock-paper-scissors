@@ -47,5 +47,9 @@ function game() {
         winCount += playRound(prompt("Choose Rock, Papers, Scissors: "), computerPlay());
     }
 
-    console.log(winCount);
+    if (winCount > 2) {
+        console.log("You Win!");
+    } else {
+        console.log("You Lose!");
+    }
 }

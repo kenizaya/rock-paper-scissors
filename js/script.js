@@ -45,5 +45,3 @@ function game() {
 
     console.log(winCount);
 }
-
-// console.log(playRound("rock", computerPlay()));
